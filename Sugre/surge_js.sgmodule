@@ -2,7 +2,6 @@
 #!desc= 个人常用脚本整理
 #!system=ios
 
-
 [Rule]
 # 知乎广告拦截
 RULE-SET,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/script/zhihu/zhihu_remove_ads.list,REJECT
@@ -11,11 +10,9 @@ DOMAIN-SUFFIX,cm.bilibili.com,REJECT
 URL-REGEX,^https?:\/\/api\.bilibili\.com\/x\/v2\/dm\/ad,REJECT
 URL-REGEX,^https?:\/\/manga\.bilibili\.com\/twirp\/comic\.v\d\.comic\/flash,REJECT
 
-
 [Map Local]
 # 知乎去除最常访问
 ^https?:\/\/api\.zhihu\.com\/moments\/recent data="https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/blank.json"
-
 
 [URL Rewrite]
 # BiliBili
@@ -30,7 +27,6 @@ URL-REGEX,^https?:\/\/manga\.bilibili\.com\/twirp\/comic\.v\d\.comic\/flash,REJE
 ^https?:\/\/haojia\.m\.smzdm\.com\/detail_modul\/banner - reject
 ^https?:\/\/api\.smzdm\.com\/v\d\/util\/(banner|loading) - reject
 ^https?:\/\/app-api\.smzdm\.com\/util\/loading - reject
-
 
 [Script]
 # 淘宝比价
