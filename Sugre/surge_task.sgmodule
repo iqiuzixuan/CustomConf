@@ -22,13 +22,13 @@ Bilibili银瓜子转硬币 = type=cron,cronexp=10 0 0 * * *,script-path=https://
 # 切换会话
 切换会话 = type=cron,cronexp=11 0 * * *,wake-system=1,script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/box/switcher/box.switcher.js
 # 什么值得买每日自动签到与完成任务
-什么值得买_每日签到 = type=cron,cronexp=5 0 * * *,script-path=https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/script/smzdm/smzdm_checkin.js
+什么值得买_每日签到 = script-path=https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/script/smzdm/smzdm_checkin.js,timeout=120,type=cron,cronexp=5 0 * * *
 # 百度贴吧每日自动签到
 贴吧_每日签到 = type=cron,cronexp=30 0 * * *,timeout=60,script-path=https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/script/tieba/tieba_checkin.js
 # 中国联通每日自动签到与抽奖
 联通_签到与抽奖 = type=cron,cronexp=20 0 * * *,timeout=60,script-path=https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/script/10010/unicom_checkin.js
 # 嘀嗒出行
-嘀嗒出行_每日签到 = type=cron,cronexp=10 0 * * *,script-path=https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/script/didachuxing/didachuxing_plus.js
+嘀嗒出行_每日签到 = script-path=https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/script/didachuxing/didachuxing_plus.js,type=cron,cronexp=10 0 * * *
 # 滴滴出行
 滴滴出行_每日签到 = type=cron,timeout=120,cronexp=05 0 * * *,script-path=https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/script/didichuxing/didi_checkin.js
 # 饿了么
