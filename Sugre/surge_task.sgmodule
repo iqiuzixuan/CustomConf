@@ -1,24 +1,45 @@
 #!name=定时任务
-#!desc=签到、提醒等定时任务  @w37fhy
+#!desc= 个人常用任务模块集合
+#!system=ios
 
-[MITM]
-hostname = trade-acs.m.taobao.com, api.m.jd.com, *.bilibili.com, music.163.com, act.10010.com, m.client.10010.com, ifac*.iqiyi.com, mp.weixin.qq.com, *.amemv.com, ms.jr.jd.com
 
 [Script]
+# 京东
 京东多合一签到 = type=cron,cronexp=5 0 * * *,wake-system=1,timeout=20,script-path=https://raw.githubusercontent.com/NobyDa/Script/master/JD-DailyBonus/JD_DailyBonus.js
-# 京东游戏
 京东种豆得豆 = type=cron,cronexp=1 7-21/2 * * *,wake-system=1,timeout=20,script-path=https://raw.githubusercontent.com/lxk0301/jd_scripts/master/jd_plantBean.js
 京东天天加速 = type=cron,cronexp=8 */3 * * *,wake-system=1,timeout=20,script-path=https://raw.githubusercontent.com/lxk0301/jd_scripts/master/jd_speed.js
 京东摇钱树 = type=cron,cronexp=3 */2 * * *,wake-system=1,timeout=20,script-path=https://raw.githubusercontent.com/lxk0301/jd_scripts/master/jd_moneyTree.js
 进店领豆 = type=cron,cronexp="10 0 * * *",wake-system=1,timeout=20,script-path=https://raw.githubusercontent.com/lxk0301/jd_scripts/master/jd_shop.js
-# 京东价格提醒
 京东价格提醒 = type=cron,cronexp=5 0 * * *,script-path=https://raw.githubusercontent.com/toulanboy/scripts/master/jd_price_detect/jd_price_detect.js,wake-system=true,timeout=600
+
 Bilibili签到 = type=cron,cronexp=10 0 0 * * *,script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/bilibili/bilibili.js,script-update-interval=0
-# bilibili银瓜子转硬币
 Bilibili银瓜子转硬币 = type=cron,cronexp=10 0 0 * * *,script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/bilibili/bilibili.silver2coin.js,script-update-interval=0
+
 网易云签到 = type=cron,cronexp=10 0 0 * * *,script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/neteasemusic/neteasemusic.js,script-update-interval=0
-中国联通签到 = script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/10010/10010.js,type=cron,cronexp=10 0 0 * * *
+
 爱奇艺签到 = type=cron,cronexp=11 0 * * *,script-path=https://raw.githubusercontent.com/NobyDa/Script/master/iQIYI-DailyBonus/iQIYI.js
+
 机场签到Cookie版 = type=cron,cronexp=0 1 * * *,wake-system=1,timeout=20,script-path=https://raw.githubusercontent.com/evilbutcher/Quantumult_X/master/check_in/glados/checkincookie_env.js
+
 # 切换会话
 切换会话 = type=cron,cronexp=11 0 * * *,wake-system=1,script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/box/switcher/box.switcher.js
+
+# 什么值得买每日自动签到与完成任务
+什么值得买_每日签到 = script-path=https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/script/smzdm/smzdm_checkin.js,timeout=120,type=cron,cronexp=5 0 * * *
+什么值得买_获取账号密码 = script-path=https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/script/smzdm/smzdm_checkin.js,type=http-request,requires-body=true,pattern=^https?:\/\/user-api\.smzdm\.com\/user_login\/normal$
+
+# 百度贴吧每日自动签到
+贴吧_每日签到 = type=cron,cronexp=30 0 * * *,timeout=60,script-path=https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/script/tieba/tieba_checkin.js
+
+# 中国联通每日自动签到与抽奖
+联通_签到与抽奖 = type=cron,cronexp=20 0 * * *,timeout=60,script-path=https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/script/10010/unicom_checkin.js
+
+嘀嗒出行_每日签到 = script-path=https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/script/didachuxing/didachuxing_plus.js,type=cron,cronexp=10 0 * * *
+
+滴滴出行_每日签到 = type=cron,timeout=120,cronexp=05 0 * * *,script-path=https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/script/didichuxing/didi_checkin.js
+
+饿了么_领取任务及吃货豆 = type=cron,cronexp=00 10 * * *,timeout=60,script-path=https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/script/eleme/eleme_daily.js
+
+
+[MITM]
+hostname = %APPEND% trade-acs.m.taobao.com, api.m.jd.com, *.bilibili.com, music.163.com, act.10010.com, m.client.10010.com, ifac*.iqiyi.com, mp.weixin.qq.com, *.amemv.com, ms.jr.jd.com, zhiyou.smzdm.com, user-api.smzdm.com, c.tieba.baidu.com, www.didapinche.com, api.didialift.com,bosp-api.xiaojukeji.com,as.xiaojukeji.com,manhattan.webapp.xiaojukeji.com,h5.ele.me
