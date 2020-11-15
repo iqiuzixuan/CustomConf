@@ -27,4 +27,4 @@ Bilibili获取Cookie = type=http-request,pattern=^https:\/\/(www|live)\.bilibili
 
 
 [MITM]
-hostname = trade-acs.m.taobao.com, api.m.jd.com, *.bilibili.com, music.163.com, act.10010.com, m.client.10010.com, ifac*.iqiyi.com, mp.weixin.qq.com, *.amemv.com, ms.jr.jd.com, zhiyou.smzdm.com, user-api.smzdm.com, c.tieba.baidu.com, www.didapinche.com, api.didialift.com,bosp-api.xiaojukeji.com,as.xiaojukeji.com,manhattan.webapp.xiaojukeji.com,h5.ele.me
+hostname = %APPEND% trade-acs.m.taobao.com, api.m.jd.com, *.bilibili.com, music.163.com, act.10010.com, m.client.10010.com, ifac*.iqiyi.com, mp.weixin.qq.com, *.amemv.com, ms.jr.jd.com, zhiyou.smzdm.com, user-api.smzdm.com, c.tieba.baidu.com, www.didapinche.com, api.didialift.com,bosp-api.xiaojukeji.com,as.xiaojukeji.com,manhattan.webapp.xiaojukeji.com,h5.ele.me, dlercloud.com
